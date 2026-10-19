@@ -1,0 +1,45 @@
+{
+  "displayName": "Heatzy Platform",
+  "name": "@jerome71/homebridge-heatzy-platform",
+  "version": "1.0.0",
+  "description": "Homebridge plugin for Heatzy Pilote (gen. 1 to 4), Elec'Pro and Pilote Pro: thermostat, humidity, boost, presence detection, open-window detection, schedule.",
+  "license": "Apache-2.0",
+  "author": "Jérôme Colas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerome71/homebridge-heatzy-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jerome71/homebridge-heatzy-platform/issues"
+  },
+  "homepage": "https://github.com/jerome71/homebridge-heatzy-platform#readme",
+  "main": "index.js",
+  "keywords": [
+    "homebridge-plugin",
+    "homekit",
+    "heatzy",
+    "pilote",
+    "pilote-pro",
+    "fil-pilote",
+    "thermostat"
+  ],
+  "engines": {
+    "node": "^18.15.0 || ^20.18.0 || ^22.10.0 || ^24.0.0",
+    "homebridge": "^1.8.0 || ^2.0.0-beta.0"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "config.schema.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "build:dev": "node scripts/build-dev.js"
+  },
+  "devDependencies": {
+    "hap-nodejs": "^0.12.0"
+  }
+}

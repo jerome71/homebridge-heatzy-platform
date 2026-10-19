@@ -1,0 +1,148 @@
+{
+  "pluginAlias": "HeatzyPlatform",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Use the same credentials as the Heatzy app. The modules of the account (Pilote, Elec'Pro, Pilote Pro) are imported automatically.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "username": {
+        "title": "E-mail",
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "title": "Password",
+        "type": "string",
+        "required": true,
+        "format": "password"
+      },
+      "frenchNames": {
+        "title": "French names in HomeKit",
+        "type": "boolean",
+        "default": false,
+        "description": "Use the names of the Pilote Pro manual (Confort, Éco, Hors-gel, Arrêt…) instead of English ones. Names you changed yourself in the Home app are kept."
+      },
+      "showModeComfort": {
+        "title": "Mode: Comfort",
+        "type": "boolean",
+        "default": false,
+        "description": "One HomeKit switch per enabled mode (or one source of the mode tile if it is enabled below). If no mode is enabled: no switch on a Pilote Pro (the thermostat is enough, plus presence detection), and Comfort / Eco / Frost protection / Off on the other modules."
+      },
+      "showModeComfort1": {
+        "title": "Mode: Comfort -1",
+        "type": "boolean",
+        "default": false
+      },
+      "showModeComfort2": {
+        "title": "Mode: Comfort -2",
+        "type": "boolean",
+        "default": false
+      },
+      "showModeEco": {
+        "title": "Mode: Eco",
+        "type": "boolean",
+        "default": false
+      },
+      "showModeFrostProtection": {
+        "title": "Mode: Frost protection",
+        "type": "boolean",
+        "default": false
+      },
+      "showModeOff": {
+        "title": "Mode: Off",
+        "type": "boolean",
+        "default": false
+      },
+      "showModePresence": {
+        "title": "Mode: Presence detection",
+        "type": "boolean",
+        "default": false,
+        "description": "Pilote Pro only."
+      },
+      "showModeSelector": {
+        "title": "Group the modes in a single \"Heating mode\" tile",
+        "type": "boolean",
+        "default": false,
+        "description": "Creates a television-type accessory whose sources are the modes enabled above (including presence detection). The individual switches of these modes are then not shown. Boost, Vacation and Schedule remain separate switches. HomeKit shows it with a television icon."
+      },
+      "showSwitchesWithSelector": {
+        "title": "With the mode tile: also keep one switch per mode",
+        "type": "boolean",
+        "default": false,
+        "description": "The single-choice tile cannot be used as a trigger or an action in Home app automations. This option adds one switch per enabled mode (and for presence detection) next to the tile, kept in sync with it, that you can use in automations."
+      },
+      "lockThermostats": {
+        "title": "Lock the module after a mode change",
+        "type": "boolean",
+        "default": false,
+        "description": "Locks the module buttons after a mode is changed from a switch."
+      },
+      "pollInterval": {
+        "title": "Sync interval (seconds)",
+        "type": "integer",
+        "default": 60,
+        "minimum": 15,
+        "maximum": 600,
+        "description": "Heatzy rate-limits its cloud: do not go below 30 s without a reason."
+      },
+      "showThermostat": {
+        "title": "Pilote Pro: show the thermostat",
+        "type": "boolean",
+        "default": true,
+        "description": "Temperature, humidity, setpoint, lock, Off / Heat."
+      },
+      "showHumidity": {
+        "title": "Pilote Pro: show humidity",
+        "type": "boolean",
+        "default": true
+      },
+      "showBoost": {
+        "title": "Boost switch",
+        "type": "boolean",
+        "description": "Default: on for the Pilote Pro, off for other modules."
+      },
+      "boostMinutes": {
+        "title": "Boost duration (minutes)",
+        "type": "integer",
+        "default": 60,
+        "minimum": 1,
+        "maximum": 255
+      },
+      "showVacation": {
+        "title": "Vacation switch",
+        "type": "boolean",
+        "default": false
+      },
+      "vacationDays": {
+        "title": "Vacation duration (days)",
+        "type": "integer",
+        "default": 7,
+        "minimum": 1,
+        "maximum": 255
+      },
+      "showWindowDetection": {
+        "title": "Pilote Pro: open-window detection switch",
+        "type": "boolean",
+        "default": true,
+        "description": "Enables or disables the module's open-window detection."
+      },
+      "showSchedule": {
+        "title": "Schedule switch",
+        "type": "boolean",
+        "description": "On: the module follows the weekly schedule created in the Heatzy app. Off: it keeps the chosen mode. The plugin does not edit the schedule. Default: on for the Pilote Pro, off for other modules."
+      },
+      "showLock": {
+        "title": "Lock switch (Pilote and Elec'Pro only)",
+        "type": "boolean",
+        "default": false,
+        "description": "On a Pilote Pro, the lock is already part of the thermostat."
+      },
+      "dryRun": {
+        "title": "Dry run (sends no command)",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  }
+}

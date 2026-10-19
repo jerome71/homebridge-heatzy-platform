@@ -6,15 +6,19 @@
   "schema": {
     "type": "object",
     "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "Heatzy Platform",
+        "description": "Name shown in the Homebridge log."
+      },
       "username": {
         "title": "E-mail",
-        "type": "string",
-        "required": true
+        "type": "string"
       },
       "password": {
         "title": "Password",
         "type": "string",
-        "required": true,
         "format": "password"
       },
       "frenchNames": {
@@ -143,6 +147,10 @@
         "type": "boolean",
         "default": false
       }
-    }
+    },
+    "required": [
+      "username",
+      "password"
+    ]
   }
 }

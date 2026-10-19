@@ -1,7 +1,7 @@
 {
   "displayName": "Heatzy Platform",
   "name": "@jerome71/homebridge-heatzy-platform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Homebridge plugin for Heatzy Pilote (gen. 1 to 4), Elec'Pro and Pilote Pro: thermostat, humidity, boost, presence detection, open-window detection, schedule.",
   "license": "Apache-2.0",
   "author": "Jérôme Colas",
@@ -16,6 +16,7 @@
   "main": "index.js",
   "keywords": [
     "homebridge-plugin",
+    "supports-hap",
     "homekit",
     "heatzy",
     "pilote",

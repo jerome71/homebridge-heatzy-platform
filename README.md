@@ -1,5 +1,7 @@
 # Homebridge Heatzy Platform
 
+[![verified-by-homebridge](https://img.shields.io/badge/_-verified-blueviolet?color=%23491F59&style=flat&logoColor=%23FFFFFF&logo=homebridge)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
+
 [Homebridge](https://homebridge.io) plugin for **Heatzy** modules: Pilote (gen. 1 to 4), Acova Elec'Pro and **Pilote Pro**. It uses the Heatzy cloud with your Heatzy app account (no local API).
 
 Developed and tested on a Pilote Pro. Other models follow the official Heatzy documentation and are less tested. See [Known limitations](#known-limitations) and the [changelog](CHANGELOG.md).
@@ -103,6 +105,8 @@ Everything is in the Homebridge settings screen. Main options:
 ## Support
 
 [GitHub issues](https://github.com/jerome71/homebridge-heatzy-platform/issues). Please include the plugin version, your module model and the relevant log lines (never your password).
+
+If you find this plugin useful, you can [donate via PayPal](https://www.paypal.com/donate/?hosted_button_id=JF4V45QWF2QHQ).
 
 ## Credits
 

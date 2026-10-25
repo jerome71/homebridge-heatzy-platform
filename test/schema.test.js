@@ -18,3 +18,8 @@ test('package.json declares the supported transport', () => {
   assert.ok(pkg.keywords.includes('supports-hap'));
   assert.ok(pkg.keywords.includes('homebridge-plugin'));
 });
+
+test('package.json has a funding link for the Homebridge Donate button', () => {
+  assert.equal(pkg.funding.type, 'paypal');
+  assert.match(pkg.funding.url, /^https:\/\/www\.paypal\.com\/donate\//);
+});
